@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    height: 431px;
+    background: url(https://www.xunlei.com/v2018/dist/about-bg.jpg?h=c17209) no-repeat center
+}
+
+.header{
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+    color: white;
+    font-size: 14px;
+}
+.header>li{
+    float: right;
+    margin-left: 20px;
+    display: inline-block;
+    height: 84px;
+    line-height: 64px;
+    text-align: center;
+    padding: 0 10px;
+}
+.header>.icon{
+    float: left;
+    margin-left: 0;
+    display: inline-block;
+    height: 37px;
+}
+img{
+    margin-top: 15px;
+    width: 78px;
+    height: 37px;
+}
+header>h1{
+    display: block;
+    margin-top: 90px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 44px;
+}
+/*change背景过度动画*/
+.change{
+    float: top;
+    height: 64px;
+}
+.change:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 0.3s;
+}
+/*下边框过度动画*/
+.header-prv{
+    position: relative;
+}
+.header-prv::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 50%;
+    margin-left: -50%;
+    width: 100%;
+    height: 62px;
+    border-bottom: 2px solid white;
+    transform: scaleX(0);
+}
+.header .header-prv:hover::after{
+    transform: scale(1);
+    transition: all 0.5s;
+}
+/*二级分栏*/
+.header-next{
+    position: relative;
+    height: 62px;
+}
+.header-next>ul>li{
+    position: relative;
+    z-index: 3;
+    display: block;
+    height: 41px;
+    font-size: 14px;
+    line-height: 41px;
+    background-color: black;
+    border-bottom: 1px solid grey;
+}
+.header-next>ul>li:hover{
+    color: #0f97ff;
+}
+.header-next ul{
+    display: block;
+    position: relative;
+    top: -30%;
+    z-index: 3;
+    background-color: black;
+    opacity: 0;
+}
+.header-next ul::after{
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 50%;
+    margin-left: -50px;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: black;
+}
+.header-next:hover.header-next ul{
+    opacity: 1;
+    top: 0;
+    transition: all 0.5s;
+}
+/*main*/
+main{
+    height: 990px;
+}
+nav{
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+}
+.shadow{
+    position: sticky;
+    top: 0px;
+    height: 64px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 1px 10px #efe9e9;
+}
+nav>h3{
+    position: relative;
+    display: inline-block;
+    float: left;
+    font: 16px Arial,PingfangSC,Microsoft YaHei,Helvetica Neue,Helvetica,STHeiTi,sans-serif;
+    color: black;
+    width: 94px;
+    height: 64px;
+    padding-left: 10px;
+    line-height: 64px;
+    margin-right: 33px;
+ }
+.main-body{
+    width: 1200px;
+    margin: 0 auto;
+}
+.main-body>h3{
+    margin-top: 60px;
+    font-size: 24px;
+}
+.main-body>p{
+    margin-top: 30px;
+    font-size: 16px;
+    text-indent: 2em;
+    line-height: 1.8;
+    color: #808080;
+}
+
+
+/*过度动画*/
+nav>h3:hover{
+    /*border-bottom: 1px solid #0f97ff;*/
+    color: #0f97ff;
+    transition: color 0.3s;
+}
+nav>h3::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 61px;
+    left: 50%;
+    margin-left: -50%;
+    border-bottom: 3px solid #0f97ff;
+    transform: scaleX(0);
+}
+nav>h3:hover::after{
+    transform: scaleX(1);
+    transition: all 0.5s;
+}
+
+/*footer*/
+footer{
+    height: 308px;
+    background-color: black;
+}
+.footer-body{
+    margin: 0 auto;
+    width: 1200px;
+    height: 308px;
+    padding-top: 36px;
+}
+.footer-head{
+    width: 100%;
+    height: 58px;
+    border-bottom: 1px solid #333333;
+}
+.footer-head>li{
+    display: inline-block;
+    float: left;
+    width: 92px;
+    height: 41px;
+    color: white;
+    line-height: 41px;
+}
+.footer-head>.footer-head-icon{
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 12px;
+    width: 21px;
+    height: 17px;
+}
+.footer-information{
+    width: 100%;
+    height: 87px;
+    margin-bottom: 26px;
+    padding-top: 24px;
+}
+.footer-information>p{
+    height: 21px;
+    font-size: 12px;
+    color: #ffffff;
+}
+.footer-information>p>a{
+    font-size: 12px;
+    color: #ffffff;
+}
+.footer-information>p>a:hover{
+    border-bottom: 1px solid white;
+}
+.footer-last{
+    width: 1200px;
+    height: 36px;
+
+}
+.footer-last li{
+    display: inline-block;
+    float: left;
+    width: 148px;
+    height: 36px;
+    margin-left: 5%;
+    color: white;
+    border-right: 1px solid white;
+    font-size: 12px;
+}
+li>a{
+    color: white;
+}
+.footer-last :last-child{
+    border-right: 0;
+}
+.footer-last :first-child{
+    margin: 0;
+}
+.icon{
+    display: inline-block;
+    float: left;
+    color: white;
+    width: 40px;
+    height: 38px;
+}
+.icon1{
+    background: url(https://www.xunlei.com/v2018/dist/spr_common.png?h=26ef6d) no-repeat 0 -177px;
+}
+.icon2{
+    background: url(https://www.xunlei.com/v2018/dist/spr_common.png?h=26ef6d) no-repeat -45px -177px;
+}
+.icon3{
+    background: url(https://www.xunlei.com/v2018/dist/spr_common.png?h=26ef6d) no-repeat -90px -177px;
+}
+.icon4{
+    background: url(https://www.xunlei.com/v2018/dist/spr_common.png?h=26ef6d) no-repeat -135px -177px;
+}
+.icon5{
+    background: url(https://www.xunlei.com/v2018/dist/spr_common.png?h=26ef6d) no-repeat -180px -177px;
+}
+.wechat-father{
+    position: relative;
+}
+/*微信过度效果*/
+.wechat{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    background-color: pink;
+}
+.wechat::after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: green;
+}
+.wechat-father:hover .wechat{
+    display: block;
+    top: 35px;
+    opacity: 1;
+    transition: all 0.4s;
+}
+/*footer*/

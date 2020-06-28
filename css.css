@@ -51,6 +51,8 @@ header>h1{
 }
 /*change背景过度动画*/
 .change{
+    position: sticky;
+    top: 0;
     float: top;
     height: 64px;
 }
